@@ -1,0 +1,41 @@
+/* VS Code Dark+ 風の配色 */
+.blob-wrapper,
+.blob-wrapper table,
+.blob-num,
+.blob-code,
+.blob-code-inner,
+.react-code-view pre,
+.react-code-view code {
+  background-color: #1e1e1e !important;
+  color: hsl(0, 0%, 83%) !important;
+}
+
+.blob-code-inner .pl-k,
+.react-code-view code .pl-k {
+  color: #c586c0 !important;
+}
+
+.blob-code-inner .pl-s,
+.react-code-view code .pl-s {
+  color: #ce9178 !important;
+}
+
+.blob-code-inner .pl-c,
+.react-code-view code .pl-c {
+  color: #6a9955 !important;
+}
+
+.blob-code-inner .pl-en,
+.react-code-view code .pl-en {
+  color: #4ec9b0 !important;
+}
+
+.blob-code-inner .pl-v,
+.react-code-view code .pl-v {
+  color: #9cdcfe !important;
+}
+
+.blob-code-inner .pl-c1,
+.react-code-view code .pl-c1 {
+  color: #dcdcaa !important;
+}
