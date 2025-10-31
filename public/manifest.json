@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Theme Switcher",
+  "description": "GitHub 上のコード表示にエディタ風のテーマを適用し、ワンクリックで切り替えます。",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "GitHub Theme Switcher",
+    "default_popup": "popup/index.html"
+  },
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["https://github.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["themes/*.css"],
+      "matches": ["https://github.com/*"]
+    }
+  ]
+}

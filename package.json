@@ -1,0 +1,35 @@
+{
+  "name": "github-theme-switcher",
+  "version": "1.0.0",
+  "description": "GitHub のコード表示にエディタライクなテーマを適用する Chrome 拡張",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takaho-nshmr/github-theme-switcher.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "github",
+    "theme"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/takaho-nshmr/github-theme-switcher/issues"
+  },
+  "homepage": "https://github.com/takaho-nshmr/github-theme-switcher#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.1.27",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "esbuild": "^0.25.11",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,41 @@
+/* VS Code Light 風の配色 */
+.blob-wrapper,
+.blob-wrapper table,
+.blob-num,
+.blob-code,
+.blob-code-inner,
+.react-code-view pre,
+.react-code-view code {
+  background-color: #ffffff !important;
+  color: #1f1f1f !important;
+}
+
+.blob-code-inner .pl-k,
+.react-code-view code .pl-k {
+  color: #0000ff !important;
+}
+
+.blob-code-inner .pl-s,
+.react-code-view code .pl-s {
+  color: #a31515 !important;
+}
+
+.blob-code-inner .pl-c,
+.react-code-view code .pl-c {
+  color: #008000 !important;
+}
+
+.blob-code-inner .pl-en,
+.react-code-view code .pl-en {
+  color: #267f99 !important;
+}
+
+.blob-code-inner .pl-v,
+.react-code-view code .pl-v {
+  color: #795e26 !important;
+}
+
+.blob-code-inner .pl-c1,
+.react-code-view code .pl-c1 {
+  color: #2b91af !important;
+}
