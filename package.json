@@ -4,7 +4,8 @@
   "description": "GitHub のコード表示にエディタライクなテーマを適用する Chrome 拡張",
   "scripts": {
     "build": "node scripts/build.js",
-    "lint": "eslint \"src/**/*.{ts,tsx}\""
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
