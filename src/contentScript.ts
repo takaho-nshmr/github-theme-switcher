@@ -24,10 +24,22 @@ const getStyleElement = (): HTMLLinkElement => {
   return link;
 };
 
+const removeStyleElement = (): void => {
+  const existingLink = document.getElementById(
+    STYLE_ELEMENT_ID,
+  ) as HTMLLinkElement | null;
+  existingLink?.remove();
+};
+
 const applyTheme = (themeId: string): void => {
   const theme = findTheme(themeId) ?? findTheme(DEFAULT_THEME_ID);
 
   if (!theme) {
+    return;
+  }
+
+  if (!theme.stylesheet) {
+    removeStyleElement();
     return;
   }
 

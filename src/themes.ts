@@ -1,12 +1,16 @@
 export type ThemeDefinition = {
   id: string;
   label: string;
-  stylesheet: string;
+  stylesheet?: string;
 };
 
-export const DEFAULT_THEME_ID = "vscode-light";
+export const DEFAULT_THEME_ID = "off";
 
 export const themes: ThemeDefinition[] = [
+  {
+    id: "off",
+    label: "Off",
+  },
   {
     id: "vscode-light",
     label: "VS Code Light",
