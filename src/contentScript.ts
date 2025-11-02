@@ -9,10 +9,11 @@ type ThemeMessage = {
 
 const STYLE_ELEMENT_ID = "github-theme-switcher-style";
 
-const getStyleElement = (): HTMLLinkElement => {
-  let link = document.getElementById(
-    STYLE_ELEMENT_ID,
-  ) as HTMLLinkElement | null;
+const getStyleElement = (): HTMLLinkElement | null =>
+  document.getElementById(STYLE_ELEMENT_ID) as HTMLLinkElement | null;
+
+const ensureStyleElement = (): HTMLLinkElement => {
+  let link = getStyleElement();
 
   if (!link) {
     link = document.createElement("link");
@@ -24,6 +25,13 @@ const getStyleElement = (): HTMLLinkElement => {
   return link;
 };
 
+const removeStyleElement = (): void => {
+  const link = getStyleElement();
+  if (link) {
+    link.remove();
+  }
+};
+
 const applyTheme = (themeId: string): void => {
   const theme = findTheme(themeId) ?? findTheme(DEFAULT_THEME_ID);
 
@@ -31,8 +39,13 @@ const applyTheme = (themeId: string): void => {
     return;
   }
 
+  if (!theme.stylesheet) {
+    removeStyleElement();
+    return;
+  }
+
   const stylesheetUrl = chrome.runtime.getURL(theme.stylesheet);
-  const link = getStyleElement();
+  const link = ensureStyleElement();
   link.href = stylesheetUrl;
 };
 
